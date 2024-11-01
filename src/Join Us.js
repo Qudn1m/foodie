@@ -11,7 +11,6 @@ function JoinUs() {
         <h1>Join Us</h1>
         <h2>Share your idea, spread your creativity</h2>
         <div class="review-detail">
-            {/* <h4>Delicious Pasta</h4> */}
             <p>Send your idea Recipe at:</p>
             <p>Email: Foodie@examples.com</p>
             <Link to='/app' title='Recipe'>
