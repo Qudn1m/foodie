@@ -1,0 +1,41 @@
+.slider {
+  position: relative;
+  width: 100%; /* Adjust as needed */
+  margin: auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.slide-image {
+  width: 100%;
+  max-height:700px ;
+  transition: transform 0.5s ease-in-out;
+}
+
+.background{
+  background-color: bisque;
+}
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1;
+}
+
+.nav-button.prev {
+  left: 10px;
+}
+
+.nav-button.next {
+  right: 10px;
+}
+
+.nav-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}

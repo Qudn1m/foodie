@@ -1,0 +1,129 @@
+.home{
+  background-color: bisque;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  color: rgb(0, 0, 0);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.featured-reviews {
+  padding: 20px;
+}
+
+.review-card-app {
+  position:relative;
+  display: flex;
+  text-align: center;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  gap: 35px;
+  background-image:url(./Asset/kitchen\ background.jpg);
+  background-position: center;
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-container {
+  display:flex;
+  gap: 20px;
+  scroll-behavior: smooth;
+  padding: 40px 0;
+  overflow-y: hidden;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.recipe-container{
+  position:relative;
+  flex: 0 0 275px; /* Set fixed width for each item */
+  background-color: rgba(83, 227, 181, 0.95);
+  width: 25%;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+  scroll-snap-align: start;
+}
+
+.recipe-content{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.recipe-container:hover{
+  transform: scale(1.15);
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .recipe-container {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+.contributors{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  flex-direction:row;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .recipe-container {
+    flex: 0 0 200px; /* Adjust width for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .recipe-container {
+    flex: 0 0 160px; /* Adjust width for smaller screens */
+  }
+  .scroll-button {
+    font-size: 20px; /* Resize buttons for smaller screens */
+  }
+}
+
+.contributors {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contributors-inside{
+  text-align: center;
+}
+
+/* Position and style the scroll buttons */
+.scroll-button {
+  position: relative;
+  top: 50%;
+  transform: translateY(-25%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 8px;
+  margin: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.scroll-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.scroll-button:first-of-type {
+  left: 5px;
+}
+
+.scroll-button:last-of-type {
+  right: 5px;
+}
